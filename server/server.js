@@ -17,7 +17,7 @@ connectDb()
 const app = express();
 app.use(parse.json())
 app.use(express.json());
-const PORT = 3000 || process.env.PORT;
+const PORT = 5000 || process.env.PORT;
 const server = http.createServer(app);
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'../client'));
