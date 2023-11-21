@@ -1,0 +1,67 @@
+<nav id="navbar">
+        <div id="logo">
+            <img src="images/vinline.png" height="50px" width="200px">
+        </div>
+        <div id="navigation">
+            <div><a class="nav-link" href="/">Home</a></div>
+            <div><a class="nav-link" href="#about">About</a></div>
+            <div><a class="nav-link" href="#footer">Contact</a></div>
+            <div id="nav-seller"><a class="nav-link" href="signup-seller.html">Signup as Seller</a></div>
+            <div class="navicon"><a href="cart"><i class="fa-solid fa-cart-shopping"></i></a></div>
+            <div class="navicon"><a href="#"><i class="fa-solid fa-bell"></i></a></div>
+            <div class="login-signup-btn btn dropdown">
+                Login/Signup
+                <div class="dropdown-content">
+                    <p  onclick="location.href='signup.html'">Buyer</p>
+                    <p onclick="location.href='signup-seller.html'" style="margin-top: -14px;">Seller</p>
+                </div>
+            </div>
+            <div class="profile">
+                <!-- <div id="profile-img">
+                    <img src="images/dp.jpg">
+                </div> -->
+                <div class="profile-name"></div>
+                <button class="btn-arrow"><i class="fa-solid fa-angle-down"></i></button>
+                <div class="profile-card">
+                    <div class="profile-card-img"></div>
+                    <div class="profile-card-name"><h4></h4></div>
+                    <div class="profile-card-email"><p></p></div>
+                    <div>
+                        <button type="button" onclick="location.href='profile-seller'">Profile Dashboard</button>
+                        <button type="button">Log Out</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="hamberger">
+            <button id="hamberger-icon" onclick="showHam()"><i class="fa-solid fa-bars"></i></button>
+            <div id="hamberger-body">
+                <div><a class="ham-link" href="/">Home</a></div>
+                <div><a class="ham-link" href="#about">About</a></div>
+                <div><a class="ham-link" href="#footer">Contact</a></div>
+                <div><a class="ham-link" href="signup-seller.html">Signup as Seller</a></div>
+                <div class="hamicon"><a href="cart"><span> Cart </span><i class="fa-solid fa-cart-shopping"></i></a></div>
+                <div class="hamicon"><a href="#"><span> Notification </span><i class="fa-solid fa-bell"></i></a></div>
+                <div class="login-signup-btn btn dropdown" onclick="location.href='signup.html'">
+                    Login/Signup
+                    <div class="dropdown-content">
+                    <p  onclick="location.href='signup.html'">Buyer</p>
+                    <p onclick="location.href='signup-seller.html'">Seller</p>
+                </div>
+                </div>
+                <div class="profile">
+                    <div class="profile-name white"></div>
+                    <button class="btn-arrow"><i class="fa-solid fa-angle-down white"></i></button>
+                    <div class="profile-card">
+                        <div class="profile-card-img"></div>
+                        <div class="profile-card-name"><h4></h4></div>
+                        <div class="profile-card-email"><p></p></div>
+                        <div>
+                            <button type="button" onclick="location.href='profile'">Profile Dashboard</button>
+                            <button type="button">Log Out</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>

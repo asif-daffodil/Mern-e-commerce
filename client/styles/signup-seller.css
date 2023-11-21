@@ -1,0 +1,174 @@
+#signup
+{
+	height: auto;
+	text-align: center;
+	background-color: white;
+}
+
+#signup-heading
+{
+	margin: auto;
+	font-family: 'Lato', sans-serif;
+	font-weight: 1000;
+	font-size: 23px;
+	color: black;
+}
+
+#username-label
+{
+/*    bottom: 2rem;*/
+	left: -9.4rem;
+}
+
+#adhar-label
+{
+/*	bottom: 2rem;*/
+	left: -9rem;
+}
+
+#phn-label
+{
+/*	bottom: 2rem;*/
+	left: -8.5rem;
+}
+
+#email-label
+{
+/*	bottom: 2rem;*/
+	left: -9.4rem;
+}
+
+#password-label
+{
+/*	bottom: 2rem;*/
+	left: -8.5rem;
+}
+
+
+label
+{
+	line-height: 48px;
+	font-family: sans-serif;
+	font-weight: 300;
+	color: #585C65;
+	position: relative;
+}
+
+.input{
+	position: relative;
+}
+
+#inputs{
+	display: flex;
+	flex-wrap: wrap;
+	width: 55%;
+	margin: auto;
+	justify-content: center;
+	align-items: center;
+	gap: 1.5rem;
+	margin-top: 0.5rem;
+}
+
+.pass{
+	position: relative;
+	right: 11.75rem;
+}
+
+input[type="text"], input[type="password"], input[type="number"], input[type="email"]
+{
+	border: 1.5px solid #BEBFC0;
+	border-radius: 5px;
+	color: #585C65;
+	margin-top: -10px;
+	height: 44px;
+	width: 350px;
+}
+
+
+input:hover { 
+    outline:none;
+    border-color:#9ecaed;
+    box-shadow: 0px 0px 7px #9ecaed;
+}
+
+input:focus { 
+    outline:none;
+    border-color:#9ecaed;
+    box-shadow: 0px 0px 7px #9ecaed;
+}
+
+#submit
+{
+	margin-top: 28px;
+	height: 44px;
+	width: 350px;
+	background-color: #ED6E3F;
+	border: 1.5px solid #BEBFC0;
+	border-radius: 5px;
+	color: white;
+	transition: 0.3s ease-out;
+}
+
+#submit:hover
+{
+	background-color: #A43D19;
+}
+
+#login-link
+{
+
+	margin-top: 20px;
+	margin-right: 113px;
+	color: #585C65;
+}
+
+#login-link a
+{
+	text-decoration: none;
+	color: #ED6E3F;
+
+}
+
+#login-link a:hover
+{
+	text-decoration: underline;
+	color: #ED6E3F;
+}
+
+#terms1
+{
+	margin-top: 10px;
+	position: relative;
+	margin-right: 40px;
+	color: #585C65;
+}
+
+
+#terms2 a
+{
+	color: #ED6E3F;
+}
+
+#terms2
+{
+	position: relative;
+	margin-right: 88px;
+}
+
+#empty
+{
+	width: 100%;
+	height: 60px;
+	background-color: white;
+}
+
+@media screen and (max-width: 980px){
+    .pass{
+    	position: relative;
+    	right: 0;
+    }
+
+    #empty{
+    	display: none;
+    }
+}

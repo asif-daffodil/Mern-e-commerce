@@ -1,0 +1,269 @@
+body{
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+	padding-top: 5rem;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+#profile-page{
+	max-width: 1500px;
+	margin: auto;
+}
+
+#header{
+	display: flex;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	justify-content: space-evenly;
+	background-image: url(../images/cover.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-attachment: fixed;
+	color: white;
+	width: 80%;
+	margin: auto;
+	box-shadow: 0px 2px 5px 0px #c7c7c7;
+}
+
+#img{
+	width: 30%;
+	border-radius: 50%;
+	height: 7.5rem;
+	width: 7.5rem;
+	border: 3px solid white;
+}
+
+#img img{
+	border-radius: 50%;
+	height: inherit;
+	width: inherit;
+}
+
+#details{
+	width: 65%;
+}
+
+#name{
+	display: inline-block;
+	margin: 0;
+	font-size: 0.85rem;
+}
+
+#location{
+	display: block;
+	font-size: 0.8rem;
+}
+
+#reviews{
+	font-weight: 100;
+}
+
+#reviews h5{
+	margin-top: 0;
+}
+
+#edit{
+	height: 3rem;
+	width: 7.5rem;
+	border-radius: 0.5rem;
+	background-color: #39b364;
+	text-align: center;
+	padding-top: 0.8rem;
+	box-sizing: border-box;
+	margin-top: 3.5rem;
+	cursor: pointer;
+}
+
+#edit i{
+	color: white;
+}
+
+#edit:hover{
+	box-shadow: 0px 2px 8px 0px #918f8f;
+}
+
+.stars-outer {
+  position: relative;
+  display: inline-block;
+}
+
+.stars-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 0;
+}
+
+.stars-outer::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: white;
+}
+
+.stars-inner::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #f8ce0b;
+}
+
+/*navbox*/
+
+#navbox{
+	margin-top: 3rem;
+	height: 2.8rem;
+	width: 80%;
+	border: 1px solid #f5f5f5;
+	margin: auto;
+	display: flex;
+	gap: 0.25rem;
+	padding-bottom: 2rem;
+}
+
+.navboxes{
+	font-size: 0.95rem;
+	text-align: center;
+	width: 10rem;
+	background-color: #f5f5f5;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+.navcolor{
+	background-color: #39b364;
+	color: white;
+	box-shadow: 0px 0px 7px #9ecaed;
+}
+
+/*boxes*/
+
+.box{
+	margin: auto;
+	width: 80%;
+	display: none;
+}
+
+.show{
+	display: block;
+}
+
+/*orders*/
+
+.product
+{
+	margin-top: -5px;
+	display: flex;
+}
+
+.head{
+	font-size: 1.65rem;
+}
+
+.product-image img
+{
+	margin-left: 3px;
+	border-radius: 2px;
+  height: 100px;
+  width: 110px;
+}
+
+.name
+{
+	font-size: 18px;
+	font-family: sans-serif;
+	margin-top: -1px;
+	margin-left: 7px;
+	font-weight: 600;
+}
+
+.quantity
+{
+	font-size: 15px;
+	font-family: sans-serif;
+	color: #696969;
+	margin-left: 7px;
+	margin-top: -10px;
+}
+
+.price
+{
+	margin-top: 37px;
+	font-size: 14px;
+	margin-left: 7px;
+	font-family: sans-serif;
+	font-weight: 600;
+}
+
+.line
+{
+	border-radius: 2px;
+	margin: auto;
+	width: 98%;
+	border: 0.5px solid #E1E1E1;
+	margin-bottom: 10px;
+	margin-top: -7px;
+}
+
+/*edit*/
+
+#editProducts{
+	width: 80%;
+	margin: auto;
+}
+
+.inputs{
+	margin-top: 2rem;
+	position: relative;
+}
+
+.inputs button{
+	height: 2.5rem;
+	width: 9rem;
+	border-radius: 0.5rem;
+	text-align: center;
+	color: white;
+	font-size: 1rem;
+	border: none;
+	margin-bottom: 3rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	background-color: var(--primary-color);
+	color: white;
+}
+
+label{
+	font-size: 1.2rem;
+	display: inline-block;
+	margin-bottom: 0.7rem;
+}
+
+input{
+    font-size: 1.2rem;
+}
+
+input[type="password"] , input[type="email"] , input[type="text"] , input[type="number"] , textarea
+{
+	border: 1.5px solid #BEBFC0;
+	background-color: transparent;
+	border: none;
+	color: #585C65;
+	margin-top: -10px;
+	height: 44px;
+	width: 350px;
+	border-bottom: 2px solid black;
+	color: black;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+textarea{
+	font-size: 0.95rem;
+	height: 88px;
+}

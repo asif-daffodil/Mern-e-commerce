@@ -1,0 +1,296 @@
+
+body
+{
+	margin: 0;
+}
+
+#parent
+{
+	margin: auto;
+	height: auto;
+	width: 70%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	border: 2px solid #E1E1E1;
+	border-radius: 3px;
+	background-color: #F5F5F5;
+	align-items: flex-start;
+	margin-bottom: 30px;
+
+}
+
+/*-----Payment-----*/
+
+
+#left h3
+{
+	font-family: sans-serif;
+}
+
+#left
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+/*	width: 400px;*/
+	width: 40%;
+	height: auto;
+/*	border: 1px solid black;*/
+}
+
+label
+{
+	line-height: 44px;
+	font-size: 15px;
+	font-family: sans-serif;
+	color: #696969;
+	font-weight: 400;
+}
+
+input[type="text"]
+{
+	font-size: 14px;
+	margin-top: -10px;
+	width: 98%;
+	height: 30px;
+	border: 1.5px solid #E1E1E1;
+	border-radius: 3px;
+}
+input:hover { 
+    outline:none;
+    border-color:#9ecaed;
+    box-shadow: 0px 0px 5px #9ecaed;
+}
+
+input:focus { 
+    outline:none;
+    border-color:#9ecaed;
+    box-shadow: 0px 0px 7px #9ecaed;
+}
+
+
+#container
+{
+	width: 100%;
+	display: flex;
+}
+#state form select 
+{
+	margin-top: -7px;
+	height: 35px;
+	border: 1.5px solid #E1E1E1;
+	border-radius: 3px;
+	font-size: 14px;
+	color: #696969;
+}
+
+#state form select:hover
+{
+	outline:none;
+    border-color:#9ecaed;
+    box-shadow: 0px 0px 7px #9ecaed;
+}
+
+#state form select:focus
+{
+	outline:none;
+    border-color:#9ecaed;
+    box-shadow: 0px 0px 7px #9ecaed;
+}
+#pin-code
+{
+	width: 50%;
+	margin-left: 30px;
+}
+#pincode-form
+{
+	width: 96%;
+}
+
+#order
+{
+	margin-top: 30px;
+	height: 40px;
+	width: 100%;
+	font-size: 17px;
+	background-color: #39b364;
+    border: 1.5px solid #BEBFC0;
+    border-radius: 5px;
+    color: white;
+	background-color: var(--primary-color);
+	transition: 0.3s ease-in-out;
+	cursor: pointer;
+}
+
+#order:hover
+{
+	background-color: #377E49;
+}
+/*------cart summary-----*/
+
+#right
+{
+	margin-top: 96px;
+	background-color: white;
+	width: 400px;
+/*	width: 40%;*/
+	height: auto;
+	border: 1.5px solid #E1E1E1;
+	border-radius: 4px;
+	padding-bottom: 20px;
+	margin-bottom: 15px;
+}
+
+#right h3
+{
+	margin-left: 20px;
+	font-family: sans-serif;
+}
+
+#right h3 a
+{
+/*	margin-left: 3px;*/
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+#right h3 span
+{
+	font-size: 15px;
+	font-weight: 400;
+}
+.product
+{
+	margin: auto;
+	width: 81%;
+}
+
+.product span, #total span
+{
+	font-family: sans-serif;
+	font-size: 15px;
+	color: black;
+	font-weight: 600;
+}
+
+.name
+{
+	margin-left: 3px;
+}
+
+.price
+{
+	margin-left: 40%;
+}
+
+.description, #total
+{
+	margin-top: 5px;
+	font-size: 15px;
+	font-family: sans-serif;
+	color: #696969;
+	font-weight: 400;
+}
+
+.seperation-line
+{
+	margin-top: 5px;
+	width: 98%;
+	border-top: 1.5px solid lightgrey;
+	margin-bottom: 5px;
+}
+
+#total
+{
+	margin-left: 65.5%;
+}
+#total span
+{
+	margin-left: 3%;
+}
+
+@media screen and (max-width: 1163px)
+{
+    #parent
+    {
+    	width: 80%;
+    }
+}
+
+@media screen and (max-width: 1163px)
+{
+    #parent
+    {
+    	width: 80%;
+    }
+}
+
+@media screen and (max-width: 1020px)
+{
+    #parent
+    {
+    	width: 90%;
+    }
+}
+
+@media screen and (max-width: 909px)
+{
+	.price
+	{
+		margin-left: 33%;
+	}
+	#left
+	{
+		width: 350px;
+	}
+    #parent
+    {
+    	width: 95%;
+    }
+}
+
+@media screen and (max-width: 790px)
+{
+	.price
+	{
+		margin-left: 40%;
+	}
+
+
+@media screen and (max-width: 740px)
+{
+	.seperation-line
+	{
+		width: 99%;
+	}
+	.price
+	{
+		margin-left: 34%;
+	}
+
+	#right
+	{
+		width: 350px;
+	}
+    #parent
+    {
+    	width: 95%;
+    }
+    #total
+    {
+    	margin-left: 64%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

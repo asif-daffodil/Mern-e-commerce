@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venline</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="styles/global.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <script src="https://kit.fontawesome.com/9b7f16bc1d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- back-ground Animation -->
+    <div class="back-animation">
+        <img src="images/leaf-min.png" alt="leaf" height="195px" width="195px">
+    </div>
+    <div class="back-animation">
+    </div>
+  <main>
+
+    <%- include('include/navbar') %>
+    <section id="header">
+        <div id="header-text">
+            <h1>Get Food At Your Door Step At <span>Lowest Price</span>!</h1>
+            <h3>Welcome to our online marketplace, where you can shop from the comfort of your own home while supporting local vendors in your community! Our platform connects you directly with a wide variety of vendors, each offering their unique products and services for sale.</h3>
+            <button onclick="location.href='#search'">Search Items</button>
+        </div>
+        <div id="header-img">
+            <img src="images/header-img.png" height="240px" width="240px">
+        </div>
+    </section>
+
+    <section id="categories">
+        <div class="category"><img src="images/fish-min.png" alt="" height="140px" width="140px"><p>Fishes</p></div>
+        <div class="category"><img src="images/fruit-min.png" alt="" height="140px" width="140px"><p>Fruits</p></div>
+        <div class="category"><img src="images/milk-min.png" alt="" height="140px" width="140px"><p>Diary</p></div>
+        <div class="category"><img src="images/vegetable-min.png" alt="" height="140px" width="140px"><p>Vegetables</p></div>
+        <div class="category"><img src="images/egg-min.png" alt="" height="140px" width="140px"><p>Eggs</p></div>
+        <div class="category"><img src="images/meat-min.png" alt="" height="140px" width="140px"><p>Meat</p></div>
+    </section>
+
+    <section id="search">
+      <div id="search-main">
+        <div id="search-bar">
+            <div id="location">
+                <i class="fa-solid fa-location-dot"></i><span id="city">Dhaka </span>
+            </div>
+            <div id="search-side">
+                <span id="drop-icon"><button class="btn-arrow"><i class="fa-solid fa-caret-down"></i></button></span>
+                <span id="search-divider">|</span>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search for food items...">
+                <div id="arrow-downBox">
+                    <div id="detect">
+                        <i class="fa-solid fa-location-crosshairs" style="color: red !important;"></i>
+                        <p>Detect Your Current Location</p>
+                    </div>
+                    <p>Using GPS</p>
+                </div>
+            </div>
+        </div>
+        <div id="filter">
+            <div class="filter-box"><span>Filter</span><i class="fa-solid fa-angle-down"></i></div>
+            <div class="filter-box"><span>Ratings</span><i class="fa-solid fa-angle-down"></i></div>
+            <div class="filter-box"><span>Category</span><i class="fa-solid fa-angle-down"></i></div>
+            <div class="filter-box"><span>Price</span><i class="fa-solid fa-angle-down"></i></div>
+        </div>
+      </div>
+        <div id="cards">
+            <% for(i of products){ %>
+            <div class="card">
+                <img src="https://source.unsplash.com/300x300/?<%= i.name %>">
+                <div class="card-body">
+                <div class="name"><%= i.name %></div>
+                <div class="description"><p><%= i.description %></p></div>
+                <div class="rating">5.0 <i class="fa-solid fa-star"></i></div>
+                <div class="price">BDT. <%= i.price %> / KG</div>
+                <div onclick="addToCart('<%= i.name %>')" class="add2cart" id="cart-button">Add to Cart</div>
+                </div>
+            </div>
+            <% } %>
+        </div>
+    </section>
+
+    <section id="provide">
+        <h1>What are we Providing..?</h1>
+        <div id="provide-cards">
+            <div class="provide-card cardcolor">
+                <div class="provide-logo"><i class="fa-solid fa-person-walking-luggage logowhite i"></i></div>
+                <h3>Benefits for Seller</h3>
+                <h4 class="logowhite i"><i class="fa-solid fa-circle logowhite i sm"></i> <span>Increased Sales&nbsp; - &nbsp;You can reach a larger audience by selling online,resulting in more sales and revenue</spa></h4>
+                <h4 class="logowhite i"><i class="fa-solid fa-circle logowhite i sm"></i> <span>Increased Visibility&nbsp; - &nbsp;Product recommendations and search algorithms can help you increase your product's visibility on online marketplaces</span></h4>
+                <h4 class="logowhite i"><i class="fa-solid fa-circle logowhite i sm"></i> <span>Lower Overhead Costs&nbsp; - &nbsp;Rent,utilities,and other expenses will be reduced due to online sales</span></h4>
+            </div>
+            <div class="provide-card">
+                <div class="provide-logo"><i class="fa-solid fa-person-military-pointing i"></i></div>
+                <h3>Benefits for Customer</h3>
+                <h4 class="i"><i class="fa-solid fa-circle i sm"></i> <span>Competitive pricing&nbsp; - &nbsp;Get the best deal on your purchase while saving money</span></h4>
+                <h4 class="i"><i class="fa-solid fa-circle i sm"></i> <span>Doorstep delivery&nbsp; - &nbsp;You can receive your items directly at your doorstep with the convenience of home delivery</span></h4>
+                <h4 class="i"><i class="fa-solid fa-circle i sm"></i> <span>High quality graded produce&nbsp; - &nbsp;You can rest easy knowing your produce is fresh, graded, and up to your expectations</span></h4>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h1>About Us</h1>
+        <div id="about-body">
+            <div id="about-img">
+                <img src="images/panda-min.png" alt="selling" height="395px" width="395px">
+            </div>
+            <div id="about-text">
+            <h3>Our marketplace showcases the latest and greatest products from our featured vendors, with easy-to-navigate categories for everything from fresh produce and handmade crafts to specialty goods and personal services. You can browse each vendor's storefront to see their full range of products and learn more about their background and story.</h3>
+            <h3>Join our community and experience the joy of supporting local vendors while enjoying the convenience of online shopping. Browse our selection of high-quality products, connect with vendors, and discover something new today!</h3>
+            </div>
+        </div>
+    </section>
+
+    <%- include('include/footer') %>
+
+  </main>
+     <script type="text/javascript" src="javascript/main.js"></script>
+    <script type="text/javascript" src="javascript/navbar.js"></script>
+</body>
+</html>

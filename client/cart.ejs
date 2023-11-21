@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart</title>
+    <link rel="stylesheet" type="text/css" href="styles/global.css">
+    <link rel="stylesheet" type="text/css" href="styles/cart.css">
+  <script src="https://kit.fontawesome.com/9b7f16bc1d.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <%- include('include/navbar') %>
+  <main>
+
+
+    <div id="cart-heading">
+      <h1 style="margin-left: 5px;">Items in your cart:</h1>
+    </div>
+    <div id="parent">
+
+
+        <div id="list">
+            
+            <% for(i of cart.items){ %>
+            <div class="seperation-line">
+
+            </div>
+            <div class="product">
+
+              <div class="product-image">
+                <img src="images/apple-min.png">
+
+                <div class="product-description">
+
+                  <h3 class="product-name item-heading"><%=i.productName%></h3>
+                  <div class="product-seller">Seller: Onkit</div>
+                  <div class="product-stock">In Stock</div>
+                  <div class="remove"><a href="..."><i class="fa-solid fa-trash"></i></a></div>
+
+                </div>
+              </div>
+
+              <div class="product-price">
+                <h3>Price</h3>
+                <div class="price"><%=i.price%></div>
+              </div>
+
+              <div class="product-quantity">
+                <h3> Quantity</h3>
+                <div class="quantity"> <button class="btn-arrow decre"><i class="fa-solid fa-minus minus-icon"></i></button> <span><%=i.quantity%></span> <button class="btn-arrow incre"><i class="fa-solid fa-plus plus-icon"></i></button> </div>
+              </div>
+
+              <div class="product-total">
+                <h3>Total</h3>
+                <div class="total"> <span>40</span> Rs.</div>
+              </div>
+
+            </div>
+            <% } %>     
+        </div>
+
+
+        <div id="summary">
+            <label for="coupon" id="coupon-label">ENTER COUPON CODE</label><br>
+            <div id="coupon">
+                <input type="text" name="coupon"  id="coupon-form" placeholder="Coupon Code">
+                <button type="submit" id="coupon-submit">Apply</button>
+            </div>
+
+            <div class="calculation">
+
+              <div class="reason" style="margin-top: 20px;">Sub-total: </div> <div class="reason" style="margin-top: 20px;"> <span id="subcost">0</span> Rs. </div>
+            </div>
+
+            <div class="calculation">
+
+              <div class="reason">Delivery: </div> <div class="reason"> 00.00 Rs. </div>
+
+            </div>
+
+            <div class="calculation">
+
+              <div class="reason">Discount: </div> <div class="reason"> 00.00 Rs. </div>
+
+            </div>
+
+            <div id="line">
+
+            </div>
+
+            <div class="calculation">
+
+              <div id="total-cost" class="total-final">Total: </div> <div class="total-final"> <span id="cost">0</span> Rs. </div>
+
+            </div>
+
+
+            <button type="submit" id="order" onclick="location.href='checkout'"><i class="fa-solid fa-lock" style="padding-right: 10px; color: white;"></i>Checkout</button>
+
+        </div>
+
+    </div>
+
+    </main>
+
+    <%- include('include/footer') %>
+
+    <script type="text/javascript" src="javascript/cart.js"></script>
+    <script type="text/javascript" src="javascript/navbar.js"></script>
+
+</body>
+</html>

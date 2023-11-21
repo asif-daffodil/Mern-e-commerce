@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed</title>
+    <link rel="stylesheet" type="text/css" href="styles/global.css">
+    <link rel="stylesheet" type="text/css" href="styles/order-confirmation.css">
+    <script src="https://kit.fontawesome.com/9b7f16bc1d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <div id="confirmation">
+      <i class="fa-solid fa-circle-check"></i>
+      <h2>Thank You for your order.</h2>
+      <p>You can browse each vendor's storefront to see their full range of products and learn more about their background and story.</p>
+      <p>Your order id is <span id="order-id"> 123456789 </span></p>
+    </div>
+
+    <div id="parent">
+      <div id="left">
+        <div id="container1">
+            <div id="shipping">
+              <h4>Shipping</h4>
+              <p>Sector V</p>
+              <p>Bidhanagar</p>
+              <p>Kolkata</p>
+              <p>No Rush Shipping: Rs. 50</p>
+            </div>
+
+            <div id="payment">
+              <h4>Payment Method</h4>
+              <p>Cash on Delivery</p>
+            </div>
+          </div>
+
+          <div class="line"> </div>
+
+          <div id="container2">
+            <div id="cancel-text">
+              <h4>Made a mistake?</h4>
+              <p>You have one hour from order</p>
+              <p>placement to cancel your order.</p>
+              <p>Simply click cancel Order.</p>
+            </div>
+
+            <div id="cancel">
+              <button type="submit" id="cancel-button">Cancel Order</button>
+            </div>
+          </div>
+          <div id="continue-shopping">
+            <button type="submit" id="continue-shopping-button" onclick="location.href='/'">Continue shopping</button>
+          </div>
+      </div>
+
+      <div id="right">
+        <h4>Order Summary</h4>
+
+        <div class="product">
+          <div class="product-image"> <img src="images/apple-min.png"></div>
+          <div class="product-description">
+                <p class="name">Example Name</p>
+                <p class="quantity">Qty: 1</p>
+                <p class="price">40 Rs.</p>
+          </div>
+        </div>
+
+        <div class="line"></div>
+
+
+        <div class="product">
+          <div class="product-image"> <img src="images/tomato2-min.png"></div>
+          <div class="product-description">
+                <p class="name">Example Name</p>
+                <p class="quantity">Qty: 1</p>
+                <p class="price">40 Rs.</p>
+          </div>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="product">
+          <div class="product-image"> <img src="images/broccoli-min.png"></div>
+          <div class="product-description">
+                <p class="name">Example Name</p>
+                <p class="quantity">Qty: 1</p>
+                <p class="price">40 Rs.</p>
+          </div>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="calculation">
+          <div class="reason">Sub-total: </div> <div id="sub-total"> 120.00 Rs. </div>
+        </div>
+
+        <div class="calculation">
+          <div class="reason">Discount: </div> <div id="discount"> 120.00 Rs. </div>
+        </div>
+
+        <div class="calculation">
+          <div class="reason">Delivery: </div> <div id="delivery"> 120.00 Rs. </div>
+        </div>
+
+        <div class="line" style="margin-top: 1px;"></div>
+
+        <div class="calculation">
+          <div class="reason" id="total-label">Total: </div> <div id="total"> 120.00 Rs. </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+      <%- include('include/footer') %>
+    <script type="text/javascript" src="order-confirmation.js"></script>
+</body>
+</html>

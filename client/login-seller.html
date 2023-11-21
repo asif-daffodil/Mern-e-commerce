@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login </title>
+    <link rel="stylesheet" type="text/css" href="styles/login-seller.css">
+    <script src="https://kit.fontawesome.com/6ae7890451.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+
+
+  <body>
+
+      <section id="login">
+
+          <h1 id="login-heading">Log in</h1><br>
+
+
+          <button class="sub-btn" type="submit" id="google" style="position: relative;">
+            <img style="position: absolute; width: 25px; left: 10px;" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+            <span style="color: #585C65; margin-left: -7px;"> Continue with Google</span>
+          </button><br>
+
+          <hr class="line">  <span id="or"> or </span>  <hr class="line"><br>
+
+          <form method="post" action="api/seller/login" id="login-seller-form">
+
+          <label for = "email" id="email-label"> Email* </label> <br>
+          <input type="email" name="email"  required id="email"><br>
+
+
+          <label for = "password" id="password-label"> Password* </label> <br>
+          <input class="password" type="password" name="password" required id="password"><br>
+          <!-- <i class="show fa-solid fa-eye"></i>
+          <i class="hide fa-solid fa-eye-slash"></i> -->
+
+          <div id="forgot-password">
+            <a href="reset-password.html">Forgot your password?</a>
+          </div>
+
+
+          <button class="sub-btn" type="submit" id="submit">Log in</button>
+
+          </form>
+
+          <div id="signup-link">
+            Don't have an account? <a href="signup.html">Sign up</a>
+          </div>
+
+      </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="./javascript/login-seller.js"></script>
+  </body>
+
+
+</html>

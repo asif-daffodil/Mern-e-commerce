@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile</title>
+    <script src="https://kit.fontawesome.com/9b7f16bc1d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="styles/global.css">
+    <link rel="stylesheet" type="text/css" href="styles/profile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <%- include('include/navbar') %>
+
+    <div id="profile-page">
+        <div id="header">
+            <div id="img">
+                <img src="images/dp.jpg">
+            </div>
+
+            <div id="details">
+
+                <div id="name"><h1></h1></div>
+
+                <div id="location"><i style="color: red;" class="fa-solid fa-location-dot"></i> <span id="up-city">Kolkata</span></div>
+
+            </div>
+
+            <div id="edit"><i class="fa-regular fa-pen-to-square"></i> Edit Profile</div>
+        </div>
+
+        <div id="navbox">
+            <button class="navboxes navcolor">My Orders</button>
+            <button class="navboxes">Edit Profile</button>
+        </div>
+
+        <div class="box show" id="myOrders">
+            <h1 class="head">MY ORDERS</h2>
+            <div id="order-body">
+
+                <div class="product">
+                <div class="product-image"> <img src="images/apple-min.png"></div>
+                <div class="product-description">
+                    <p class="name">Example Name</p>
+                    <p class="quantity">Qty: 1</p>
+                    <p class="price">40 Rs.</p>
+               </div>
+            </div>
+
+            <div class="line"></div>
+
+
+            <div class="product">
+                <div class="product-image"> <img src="images/tomato2-min.png"></div>
+                <div class="product-description">
+                    <p class="name">Example Name</p>
+                    <p class="quantity">Qty: 1</p>
+                    <p class="price">40 Rs.</p>
+                </div>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="product">
+                <div class="product-image"> <img src="images/broccoli-min.png"></div>
+                <div class="product-description">
+                    <p class="name">Example Name</p>
+                    <p class="quantity">Qty: 1</p>
+                    <p class="price">40 Rs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="box" id="editProducts">
+            <form>
+                <h1 class="head">EDIT PROFILE</h1>
+                <div class="inputs">
+                    <label for="name-edit">Name</label><br>
+                    <input type="text" name="name" id="name-edit">
+                </div>
+
+                <div class="inputs">
+                    <label for="phone-edit">Phone</label><br>
+                    <input type="number" name="phone" id="phone-edit">
+                </div>
+
+                <div class="inputs">
+                    <label for="email-edit">Email</label><br>
+                    <input type="email" name="email" id="email-edit">
+                </div>
+
+                <div class="inputs">
+                    <label for="password">Change Password</label><br>
+                    <input type="password" name="password" id="password">
+                </div>
+
+                <div class="inputs">
+                    <button type="submit" id="save">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <%- include('include/footer') %>
+  
+  <script type="text/javascript" src="javascript/navbar.js"></script> 
+  <script type="text/javascript" src="javascript/profile.js"></script>
+</body>
+</html>

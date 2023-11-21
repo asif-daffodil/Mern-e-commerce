@@ -1,0 +1,145 @@
+#login
+{
+	margin-top: 100px;
+	text-align: center;
+}
+
+#login-heading
+{
+	margin-right: 288px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 550;
+	font-size: 23px;
+	color: black;
+}
+
+#google
+{
+	margin-top: -10px;
+	border: 1.5px solid #BEBFC0;
+	border-radius: 5px;
+	height: 44px;
+	width: 350px;
+	background-color: white;
+	transition: 0.1s ease-out;
+}
+
+#google:hover
+{
+	background-color: #F6F7F8;
+}
+
+
+.line
+{
+	margin-top: 27px;
+	display: inline-block;
+	width: 131px;
+	margin-bottom: -10px;
+}
+#or
+{
+	display: inline-block;
+	margin-top: 14px;
+	margin-left: 30px;
+	margin-right: 30px;
+	vertical-align: top;
+	color: #585C65;
+}
+
+#email-label
+{
+	line-height: 48px;
+	font-family: sans-serif;
+	font-weight: 300;
+	margin-right: 300px;
+	color: #585C65;
+}
+
+#password-label
+{
+	line-height: 48px;
+	font-family: sans-serif;
+	font-weight: 300;
+	margin-right: 270px;
+	color: #585C65;
+}
+
+
+input[type="password"] , input[type="email"]
+{
+	border: 1.5px solid #BEBFC0;
+	border-radius: 5px;
+	color: #585C65;
+	margin-top: -10px;
+	height: 44px;
+	width: 350px;
+	padding: 0.7rem;
+}
+
+input:hover { 
+    outline:none;
+    border-color:#9ecaed;
+    box-shadow: 0px 0px 7px #9ecaed;
+}
+
+input:focus { 
+    outline:none;
+    border-color:#9ecaed;
+    box-shadow: 0px 0px 7px #9ecaed;
+}
+
+
+#forgot-password
+{
+	margin-top: 10px;
+}
+
+#forgot-password a
+{
+	margin-right: 182px;
+	text-decoration: none;
+	color: #ED6E3F;
+}
+
+#forgot-password a:hover
+{
+	text-decoration: underline;
+}
+
+#submit
+{
+	margin-top: 24px;
+	height: 44px;
+	width: 350px;
+	background-color: #ED6E3F;
+	border: 1.5px solid #BEBFC0;
+	border-radius: 5px;
+	color: white;
+	transition: 0.3s ease-out;
+}
+
+#submit:hover
+{
+	background-color: #A43D19;
+}
+
+#signup-link
+{
+
+	margin-top: 20px;
+	margin-right: 113px;
+	color: #585C65;
+}
+
+#signup-link a
+{
+	text-decoration: none;
+	color: #ED6E3F;
+}
+
+#signup-link a:hover
+{
+	text-decoration: underline;
+	color: #ED6E3F;
+}

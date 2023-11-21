@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Seller Profile</title>
+	<script src="https://kit.fontawesome.com/9b7f16bc1d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="styles/global.css">
+	<link rel="stylesheet" type="text/css" href="styles/profile-seller.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <%- include('include/navbar') %>
+
+    <div id="profile-page">
+    	<div id="header">
+    		<div id="img">
+    		    <img src="images/dp.jpg">
+    		</div>
+
+    		<div id="details">
+
+    			<div id="name"><h1></h1></div>
+
+    			<div id="location"><i style="color: red;" class="fa-solid fa-location-dot"></i> Kolkata</div>
+
+    			<div id="reviews">
+    				<h5>Reviews</h5>
+    				<div class="ratings">
+    					<span>8.35</span>
+    					<div class="stars-outer">
+    						<div class="stars-inner"></div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+
+    		<div id="edit"><i class="fa-regular fa-pen-to-square"></i> Edit Profile</div>
+    	</div>
+
+    	<div id="navbox">
+    		<button class="navboxes navcolor">My Products</button>
+    		<button class="navboxes" onclick="location.href='product-file'">Upload Product</button>
+    		<button class="navboxes">Edit Profile</button>
+            <button class="navboxes">Orders</button>
+    	</div>
+
+    	<div class="box show" id="products">
+    	  <div id="cards">
+            <div class="card">
+                <img src="images/apple-min.png">
+                <div class="card-body">
+                <div class="name">Example Name</div>
+                <div class="description"><p>Lorem ipsumid est laborum.</p></div>
+                <div class="rating">5.0 <i class="fa-solid fa-star"></i></div>
+                <div class="price">Remove</div>
+                <div class="add2cart">Edit Product</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/tomato2-min.png">
+                <div class="card-body">
+                <div class="name">Example Name</div>
+                <div class="description"><p>Lorem ipsumid est laborum.</p></div>
+                <div class="rating">5.0 <i class="fa-solid fa-star"></i></div>
+                <div class="price">Remove</div>
+                <div class="add2cart">Edit Product</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/broccoli-min.png">
+                <div class="card-body">
+                <div class="name">Example Name</div>
+                <div class="description"><p>Lorem ipsumid est laborum.</p></div>
+                <div class="rating">5.0 <i class="fa-solid fa-star"></i></div>
+                <div class="price">Remove</div>
+                <div class="add2cart">Edit Product</div>
+                </div>
+            </div>
+          </div> 
+    	</div>
+
+    	<div class="box" id="upload">
+    		<form>
+                <h1 class="head">UPLOAD PRODUCT</h1>
+                <div class="inputs">
+                    <label for="productname">Name of Product</label><br>
+                    <input type="text" name="productname" id="productname" required>
+                </div>
+
+                <div class="inputs">
+                    <label for="description">Description</label><br>
+                    <textarea name="description" id="description"></textarea>
+                </div>
+
+                <div class="inputs" id="location-input">
+                    <label for="city" id="citylabel">Location : </label><br>
+                    <input type="text" name="city" id="city" disabled required>
+                    <div id="arrow-downBox">
+                        <div id="detect">
+                            <i class="fa-solid fa-location-crosshairs" style="color: red !important;"></i>
+                            <p>Detect Your Current Location</p>
+                        </div>
+                        <p>Using GPS</p>
+                    </div>
+                </div>
+
+                <div class="inputs" id="upload-btn">
+                    <button type="submit">Upload</button>
+               </div>
+            </form>
+            <img src="images/upload.png" height="750px" width="750px">
+    	</div>
+
+    	<div class="box" id="editProducts">
+    		<form>
+    			<h1 class="head">EDIT PROFILE</h1>
+    			<div class="inputs">
+    		        <label for="name-edit">Name</label><br>
+    		        <input type="text" name="name" id="name-edit">
+    		    </div>
+
+    		    <div class="inputs">
+    		        <label for="phone-edit">Phone</label><br>
+    		        <input type="number" name="phone" id="phone-edit">
+    		    </div>
+
+    		    <div class="inputs">
+    		        <label for="email-edit">Email</label><br>
+    		        <input type="email" name="email" id="email-edit">
+    		    </div>
+
+    		    <div class="inputs">
+    		        <label for="password">Change Password</label><br>
+    		        <input type="password" name="password" id="password">
+    		    </div>
+
+    		    <div class="inputs">
+    		        <button type="submit" id="save">Save Changes</button>
+    		    </div>
+            </form>
+    	</div>
+
+        <div class="box" id="orders">
+            <h1>Orders</h1>
+            <div id="table"> 
+                <h3>Customer Name</h3>
+                <h3>Product</h3>
+                <h3>Quantity</h3>
+                <h3>Address</h3>
+                <h3>Mobile No.</h3>
+            </div>
+            <div class="details">
+                <h4 class="customer-name">Onkit Mondol</h4>
+                <h4 class="product-name">Apple</h4>
+                <h4 class="product-quantity">1</h4>
+                <h4 class="address">Canning</h4>
+                <h4 class="phn-no">1234554321</h4>
+            </div>
+        </div>
+    </div>
+
+    <%- include('include/footer') %>
+
+    <script type="text/javascript" src="javascript/navbar.js"></script>
+    <script type="text/javascript" src="javascript/profile-seller.js"></script>
+</body>
+</html>
